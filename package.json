@@ -1,0 +1,76 @@
+{
+  "name": "copy-code-extension",
+  "displayName": "Copy Code",
+  "description": "Effortlessly copy code from files and folders to clipboard with a single right-click. Perfect for sharing code snippets and sharing complete projects.",
+  "version": "1.0.0",
+  "publisher": "your-username",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/copy-code-extension"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/copy-code-extension/issues"
+  },
+  "homepage": "https://github.com/your-username/copy-code-extension#readme",
+  "keywords": [
+    "copy",
+    "code",
+    "clipboard",
+    "share",
+    "files",
+    "folders",
+    "productivity",
+    "developer-tools"
+  ],
+  "engines": {
+    "vscode": "^1.60.0",
+    "node": ">=18.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:copy-code.copyCode"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copy-code.copyCode",
+        "title": "Copy Code to Clipboard",
+        "category": "Copy Code"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "copy-code.copyCode",
+          "group": "navigation",
+          "when": "explorerResourceIsFolder || resourceScheme == file"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile:bundle",
+    "compile": "tsc -p ./",
+    "compile:bundle": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --platform=node --target=node18 --minify",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package --out copy-code-extension.vsix",
+    "publish": "vsce publish",
+    "test": "node ./out/test/extension.test.js",
+    "lint": "eslint src/**/*.ts",
+    "pretest": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.x",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,41 @@
+.vscode/**
+.vscode-test/**
+src/**
+.gitignore
+.yarnrc
+vsc-extension-quickstart.md
+**/tsconfig.json
+**/eslint.config.mjs
+**/*.map
+**/*.ts
+**/.vscode-test.*
+
+# Development and documentation
+.git/
+.github/
+CONTRIBUTING.md
+PUBLISHING.md
+QUICK_REFERENCE.md
+.prettierrc
+.editorconfig
+.env*
+
+# Testing
+test/
+coverage/
+.nyc_output/
+**/*.test.js
+
+# Logs and cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.cache/
+
+# IDE and OS
+.idea/
+.DS_Store
+Thumbs.db
+*.vsix
+node_modules/.bin/
+node_modules/.package-lock.json
