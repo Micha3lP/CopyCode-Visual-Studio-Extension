@@ -3,16 +3,16 @@
   "displayName": "Copy Code",
   "description": "Effortlessly copy code from files and folders to clipboard with a single right-click. Perfect for sharing code snippets and sharing complete projects.",
   "version": "1.0.0",
-  "publisher": "your-username",
+  "publisher": "Micha3lP",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/copy-code-extension"
+    "url": "https://github.com/Micha3lP/CopyCode-Visual-Studio-Extension"
   },
   "bugs": {
-    "url": "https://github.com/your-username/copy-code-extension/issues"
+    "url": "https://github.com/Micha3lP/CopyCode-Visual-Studio-Extension/issues"
   },
-  "homepage": "https://github.com/your-username/copy-code-extension#readme",
+  "homepage": "https://github.com/Micha3lP/CopyCode-Visual-Studio-Extension#readme",
   "keywords": [
     "copy",
     "code",
